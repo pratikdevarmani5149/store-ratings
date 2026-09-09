@@ -1,64 +1,170 @@
-# Store Ratings Platform
+# \# StoreRatings
 
-A web app where users rate stores from 1 to 5. One login, three roles: System
-Administrator, Normal User, Store Owner.
+# 
 
-- **Backend:** Express + PostgreSQL (`/backend`)
-- **Frontend:** React + Vite (`/frontend`)
+# A full-stack store rating platform built with \*\*React.js, Express.js, and PostgreSQL\*\*.
 
-## 1. Database
+# 
 
-Create a PostgreSQL database:
+# The application provides a role-based system where users can rate registered stores, while administrators manage the platform and store owners monitor their store ratings.
 
-```sql
-CREATE DATABASE store_ratings;
-```
+# 
 
-## 2. Backend setup
+# \## User Roles \& Features
 
-```bash
-cd backend
-npm install
-cp .env.example .env
-```
+# 
 
-Edit `.env` with your real values (see "Credentials you need to add" below), then:
+# \### System Administrator
 
-```bash
-npm run migrate   # creates the users, stores, ratings tables
-npm run seed       # creates the first administrator account
-npm run dev         # starts the API on http://localhost:5000
-```
+# 
 
-## 3. Frontend setup
+# \* Dashboard with total users, stores, and ratings
 
-```bash
-cd frontend
-npm install
-npm run dev          # starts the app on http://localhost:5173
-```
+# \* Add and manage users and stores
 
-If your API runs somewhere other than `http://localhost:5000/api`, create
-`frontend/.env` with:
+# \* View users and stores
 
-```
-VITE_API_URL=https://your-api-host/api
-```
+# \* Search, filter, and sort listings
 
-## 4. Log in
+# \* View user and store details
 
-Use the administrator email/password you set in `backend/.env` under
-`SEED_ADMIN_EMAIL` / `SEED_ADMIN_PASSWORD`. From there, add store owners and
-stores from the Users and Stores screens.
+# 
 
-## Credentials you need to add
+# \### Normal User
 
-| Where | Variable | What it is |
-|---|---|---|
-| `backend/.env` | `PGHOST`, `PGPORT`, `PGDATABASE`, `PGUSER`, `PGPASSWORD` | Your PostgreSQL connection details |
-| `backend/.env` | `JWT_SECRET` | Any long random string, used to sign login sessions |
-| `backend/.env` | `SEED_ADMIN_EMAIL`, `SEED_ADMIN_PASSWORD` | The first admin account's login (change the password after first login) |
-| `backend/.env` | `CLIENT_URL` | Your frontend's URL, for CORS |
-| `frontend/.env` (optional) | `VITE_API_URL` | Only needed if the API isn't at `localhost:5000/api` |
+# 
 
-Nothing else needs a key — there are no third-party services in this build.
+# \* Sign up and log in
+
+# \* View and search registered stores
+
+# \* Submit ratings from \*\*1–5\*\*
+
+# \* Modify submitted ratings
+
+# \* View overall and personal ratings
+
+# \* Change password
+
+# 
+
+# \### Store Owner
+
+# 
+
+# \* Log in
+
+# \* View average store rating
+
+# \* View users who rated their store
+
+# \* Change password
+
+# 
+
+# \## Tech Stack
+
+# 
+
+# \* \*\*Frontend:\*\* React.js, Vite
+
+# \* \*\*Backend:\*\* Node.js, Express.js
+
+# \* \*\*Database:\*\* PostgreSQL
+
+# \* \*\*Authentication:\*\* JWT
+
+# 
+
+# \## Local Setup
+
+# 
+
+# \### Backend
+
+# 
+
+# ```bash
+
+# cd backend
+
+# npm install
+
+# ```
+
+# 
+
+# Create `.env` from `.env.example` and configure your local PostgreSQL credentials.
+
+# 
+
+# Run database migration and seed:
+
+# 
+
+# ```bash
+
+# npm run migrate
+
+# npm run seed
+
+# ```
+
+# 
+
+# Start the backend:
+
+# 
+
+# ```bash
+
+# npm run dev
+
+# ```
+
+# 
+
+# \### Frontend
+
+# 
+
+# Open another terminal:
+
+# 
+
+# ```bash
+
+# cd frontend
+
+# npm install
+
+# npm run dev
+
+# ```
+
+# 
+
+# Open:
+
+# 
+
+# ```text
+
+# http://localhost:5173
+
+# ```
+
+# 
+
+# \## Environment Variables
+
+# 
+
+# See `backend/.env.example` for the required configuration.
+
+# 
+
+# \*\*Do not commit `.env` or any passwords/secrets to GitHub.\*\*
+
+
+
